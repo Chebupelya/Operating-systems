@@ -13,7 +13,7 @@ DWORD WINAPI ChildThread_T1()
 	for (short i = 1; i <= 50; ++i)
 	{
 		cout << i << ". PID = " << pid << " [CHILD-T1]   TID = " << tid << "\n";
-		Sleep(500);
+		Sleep(1000);
 	}
 	return 0;
 }
@@ -28,7 +28,7 @@ DWORD WINAPI ChildThread_T2()
 	for (short i = 1; i <= 125; ++i)
 	{
 		cout << i << ". PID = " << pid << " [CHILD-T2]   TID = " << tid << "\n";
-		Sleep(500);
+		Sleep(1000);
 	}
 	return 0;
 }
@@ -56,7 +56,7 @@ int main()
 			case 100: ResumeThread(handleClild_T2); break;
 		}
 		cout << i << ". PID = " << pid << " [PARENT]    TID = " << parentId << "\n";
-		Sleep(500);
+		Sleep(1000);
 	}
 
 
